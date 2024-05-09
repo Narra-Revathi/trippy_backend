@@ -33,7 +33,7 @@ const connectDB = async () => {
     console.log(`MONGO Connect Error ${error}`.bgRed.white);
   }
 };
-const backendurl="https://fascinating-klepon-a6b34e.netlify.app/";
+const backendurl = "https://fascinating-klepon-a6b34e.netlify.app";
 connectDB(); // Call the function to connect to MongoDB
 
 //routes
