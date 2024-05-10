@@ -26,20 +26,17 @@ app.use(morgan("dev"));
 // MongoDB connection
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    });
+    await mongoose.connect(`mongodb+srv://revathinarra9010:revathi123@cluster1.ithabpo.mongodb.net/?retryWrites=true&w=majority&appName=cluster1`);
     console.log(
-      `Connected to MongoDB Database ${mongoose.connection.host}`.bgMagenta.white
+      `Connected to Mongodb Database ${mongoose.connection.host}`.bgMagenta
+        .white
     );
   } catch (error) {
-    console.log(`MongoDB Connection Error: ${error}`.bgRed.white);
+    console.log(`MONGO Connect Error ${error}`.bgRed.white);
   }
 };
 
-connectDB(); // Call the function to connect to MongoDB
-
+connectDB(); 
 // Route registration
 app.use('/api/v1/user', userRoutes);
 app.use('/api/v1/blog', blogRoutes);
