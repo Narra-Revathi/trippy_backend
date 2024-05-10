@@ -17,7 +17,7 @@ const app = express();
 
 // Middleware setup
 app.use(cors({
-  origin: 'https://curious-cendol-88871b.netlify.app', // Allow your frontend URL
+  origin: 'https://main--curious-cendol-88871b.netlify.app', // Allow your frontend URL
   optionsSuccessStatus: 200
 }));
 app.use(express.json());
