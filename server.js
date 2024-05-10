@@ -17,7 +17,7 @@ const app = express();
 
 // Middleware setup
 app.use(cors({
-  origin: 'https://main--curious-cendol-88871b.netlify.app', // Allow your frontend URL
+  origin: 'https://tourblog.netlify.app', // Allow your frontend URL
   optionsSuccessStatus: 200
 }));
 app.use(express.json());
@@ -36,7 +36,7 @@ const connectDB = async () => {
   }
 };
 
-connectDB(); 
+connectDB();
 // Route registration
 app.use('/api/v1/user', userRoutes);
 app.use('/api/v1/blog', blogRoutes);
